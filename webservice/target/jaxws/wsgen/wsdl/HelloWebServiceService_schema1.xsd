@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservice.com/" xmlns:tns="http://webservice.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getAgeMessage" type="tns:getAgeMessage"/>
+
+  <xs:element name="getAgeMessageResponse" type="tns:getAgeMessageResponse"/>
+
+  <xs:element name="getMessage" type="tns:getMessage"/>
+
+  <xs:element name="getMessageResponse" type="tns:getMessageResponse"/>
+
+  <xs:complexType name="getMessage">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMessageResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAgeMessage">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAgeMessageResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
